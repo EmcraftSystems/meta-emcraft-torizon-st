@@ -1,0 +1,2 @@
+UBOOT_BINARY_OTA_IGNORE = "1"
+IMAGE_FSTYPES = "ext4 tar.zst"
