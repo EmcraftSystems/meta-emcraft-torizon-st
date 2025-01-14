@@ -10,6 +10,8 @@ SRC_URI:append = " \
 # representing device-tree overlays) to be used when booting.
 FITCONF_FDT_OVERLAYS ??= ""
 
+KERNEL_BOOTCMD:arm ??= "bootm"
+
 do_compile:append () {
     bbdebug 1 "Building uEnv.txt..."
     sed -e 's/@@KERNEL_BOOTCMD@@/${KERNEL_BOOTCMD}/' \

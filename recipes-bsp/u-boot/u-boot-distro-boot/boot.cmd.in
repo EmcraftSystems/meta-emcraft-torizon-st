@@ -24,9 +24,9 @@ env set fdtfile2 "${fdtfile}"
 
 if test -n "${loadaddr}"
 then
-    ext4load ${devtype} ${devnum}:6 ${loadaddr} /boot/loader/uEnv.txt; env import -t ${loadaddr} ${filesize}
+    ext4load ${devtype} ${devnum}:${distro_bootpart} ${loadaddr} /boot/loader/uEnv.txt; env import -t ${loadaddr} ${filesize}
 else
-    ext4load ${devtype} ${devnum}:6 ${scriptaddr} /boot/loader/uEnv.txt; env import -t ${scriptaddr} ${filesize}
+    ext4load ${devtype} ${devnum}:${distro_bootpart} ${scriptaddr} /boot/loader/uEnv.txt; env import -t ${scriptaddr} ${filesize}
 fi
 
 run bootcmd_run
