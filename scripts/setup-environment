@@ -147,7 +147,7 @@ if [ -z "${SDKMACHINE}" ]; then
 fi
 
 MANIFESTS="${OEROOT}"/.repo/manifests
-SCRIPTS="${OEROOT}"/layers/meta-torizon-st/scripts
+SCRIPTS="${OEROOT}"/layers/meta-emcraft-torizon-st/scripts
 
 # We can be called with only 1 parameter max (build folder)
 BUILDDIR=${1:-build-$DISTRO}
