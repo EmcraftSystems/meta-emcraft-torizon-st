@@ -26,7 +26,7 @@ UBOOT_BINARY_OTA_IGNORE:stm32mp15-disco = "1"
 
 IMAGE_FSTYPES:append:stm32mp15-disco = " teziimg"
 TEZI_USE_BOOTFILES:stm32mp15-disco = "false"
-UBOOT_BINARY_TEZI_EMMC:stm32mp15-disco = "fip/fip-stm32mp157f-dk2-optee-sdcard.bin"
+UBOOT_BINARY_TEZI_EMMC:stm32mp15-disco = "fip/fip-stm32mp157f-dk2-opteemin-sdcard.bin"
 OFFSET_BOOTROM_PAYLOAD:stm32mp15-disco = "0"
 TORADEX_PRODUCT_IDS:stm32mp15-disco = "0100"
 UBOOT_ENV_TEZI_EMMC:stm32mp15-disco = ""
