@@ -1,6 +1,5 @@
 IMAGE_ROOTFS_MAXSIZE = "2500000"
 
-
 # NOTE: ignore OTA bootloader until the recipe is implemented
 UBOOT_BINARY_OTA_IGNORE:stm32mp25-eval = "1"
 
@@ -31,22 +30,8 @@ OFFSET_BOOTROM_PAYLOAD:stm32mp15-disco = "0"
 TORADEX_PRODUCT_IDS:stm32mp15-disco = "0100"
 UBOOT_ENV_TEZI_EMMC:stm32mp15-disco = ""
 
-
-# # NOTE: ignore OTA bootloader until the recipe is implemented
-# UBOOT_BINARY_OTA_IGNORE:stm32mp2common = "1"
-
-# IMAGE_FSTYPES:append:stm32mp2common = " teziimg"
-# TEZI_USE_BOOTFILES:stm32mp2common = "false"
-# OFFSET_BOOTROM_PAYLOAD:stm32mp2common = "0"
-# TORADEX_PRODUCT_IDS:sstm32mp2common = "0100"
-# UBOOT_ENV_TEZI_EMMC:stm32mp2common = ""
-# UBOOT_BINARY_TEZI_EMMC:stm32mp25-eval = "fip/fip-stm32mp257f-ev1-optee-emmc.bin"
-# UBOOT_BINARY_TEZI_EMMC:stm32mp25-disco = "fip/fip-stm32mp257f-dk-optee-emmc.bin"
-# UBOOT_BINARY_TEZI_EMMC:stm32mp15-disco = "fip/fip-stm32mp157f-dk2-optee-sdcard.bin"
-
 CORE_IMAGE_BASE_INSTALL:append:stm32mp2common = " \
     set-hostname \
-    minicom \    
 "
 
 def make_dtb_boot_files(d):
