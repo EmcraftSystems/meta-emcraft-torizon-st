@@ -160,9 +160,7 @@ else
             DISTRO="common-torizon" . ${_TDX_SCRIPTS_PATH}/setup-environment-renesas
         ;;
         stm32mp25-eval|stm32mp15-disco|stm32mp25-disco)
-#            DISTRO="common-torizon" . "${_TDX_LAYERS_DIR}"/meta-emcraft-torizon-st/scripts/setup-environment-stm32mp
-            DISTRO="torizon" . layers/meta-emcraft-torizon-st/scripts/setup-environment-stm32mp
-#            . ${_TDX_SCRIPTS_PATH}/setup-environment-toradex $@
+            DISTRO="common-torizon" . layers/meta-emcraft-torizon-st/scripts/setup-environment-stm32mp
         ;;
         *)
             echo "Unknown machine ${MACHINE}!"
